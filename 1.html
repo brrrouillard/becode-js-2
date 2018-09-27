@@ -8,7 +8,26 @@
 </head>
 <body>
     <script>
+        function surfaceRectangle(){
+            let largeur = prompt("Largeur ?");
+            let longueur = prompt("Longueur ?");
+            let surface = largeur*longueur;
+            document.open();
+            document.write(`<p>Surface : ${surface}</p>`)
+            document.close();
+        }
+
+        function periRectangle(){
+            let largeur = prompt("Largeur ?");
+            let longueur = prompt("Longueur ?");
+            let peri =  (largeur*2) + (longueur*2);
+            document.open();
+            document.write(`<p>Surface : ${peri}</p>`)
+            document.close();
+        }
     </script>
+    <button onclick="surfaceRectangle();">Calculer la surface d'un rectangle</button>
+    <button onclick="periRectangle();">Calculer le périmètre d'un rectangle</button>
     
 </body>
 </html>

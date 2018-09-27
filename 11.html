@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercice 11</title>
+</head>
+
+<body>
+    <script>
+        function calculMoyenne() {
+            let input = "";
+            let somme = 0;
+            let additionCount = 0;
+            let keepLooping = true;
+
+            while (keepLooping) {
+                input = parseInt(prompt("Entrez un entier"));
+                if(Number.isInteger(input)){
+                    if (input >= 0){
+                        somme += input;
+                        additionCount++;
+                    }
+                    else{
+                        alert(`Moyenne des ${additionCount} nombres : ${somme/additionCount}`);
+                        keepLooping = false;
+                    }
+                }               
+            }
+        }
+    </script>
+    <button onclick="calculMoyenne()">Calcul moyenne</button>
+
+</body>
+
+</html>
