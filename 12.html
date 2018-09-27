@@ -10,12 +10,53 @@
 
 <body>
     <script>
-        function conversionTemperature(){
-            
+        function conversionTemperature() {
+            let choice;
+            let temp;
+            let result;
+            while (choice != 0) {
+                choice = parseInt(prompt("Votre choix :"));
+                if (choice == 0) { break; }
+                temp = parseInt(prompt("Température :"));
+                switch (choice) {
+                    case 1:
+                        result = (temp * 9 / 5) + 32;
+                        alert(`${result} °F`);
+                        break;
+                    case 2:
+                        result = temp + 273.15;
+                        alert(`${result} K`);
+                        break;
+                    case 3:
+                        result = (temp - 32) / 9/5  ;
+                        alert(`${result} °C`);
+                        break;
+                    case 4:
+                        result = (temp - 32) / (9/5);
+                        alert(`${result} K`);
+                        break;
+                    case 5:
+                        result = temp - 273.15;
+                        alert(`${result} °C`);
+                        break;
+                    case 6:
+                        result = (temp * 9 / 5) - 459.67;
+                        alert(`${result} °F`);
+                        break;
+                }
+            }
         }
 
     </script>
-    <button onclick="conversionTemperature()">Calcul moyenne</button>
+    <p>Votre choix :<br>
+        0. Quitter <br>
+        1. De Celsius vers Fahrenheit<br>
+        2. De Celsius vers Kelvin<br>
+        3. De Fahrenheit vers Celsius<br>
+        4. De Fahrenheit vers Kelvin<br>
+        5. De Kelvin vers Celsius<br>
+        6. De Kelvin vers Fahrenheit</p>
+    <button onclick="conversionTemperature()">Conversion</button>
 
 </body>
 

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercice 13</title>
+</head>
+
+<body>
+    <script>
+        function calculIMC() {
+            let taille = parseFloat(prompt("Entrez votre taille en mètres"));
+            let poids = parseFloat(prompt("Entrez votre poids en kg"));
+            let imc = poids / (taille * taille);
+            if (imc < 16.5) {
+                alert("Dénutrition ou famine");
+            }
+            else if (imc <= 18.5) {
+                alert("Maigreur")
+            }
+            else if (imc < 25) {
+                alert("Corpulence normale");
+            }
+            else if (imc < 30) {
+                alert("Surpoids");
+            }
+            else if (imc < 35) {
+                alert("Obésité modérée")
+            }
+            else if (imc < 40) {
+                alert("Obésité sévère");
+            }
+            else {
+                alert("Obésité morbide");
+            }
+        }
+
+    </script>
+    <button onclick="calculIMC()">Calculer l'IMC</button>
+
+</body>
+
+</html>
