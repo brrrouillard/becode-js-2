@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 1</title>
+  </head>
+  <body>
+      <img src="images/image1.jpg" id="image1" />
+
+      <script>
+          function changeImage(event){
+              image.src = "images/image1_2.jpg";
+              console.log(image);
+          }
+          let image = document.querySelector("#image1");
+          image.addEventListener("mouseover", changeImage);
+          
+      </script>
+  </body>
+</html>
