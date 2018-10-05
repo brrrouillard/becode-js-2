@@ -16,7 +16,9 @@
   </div>
 
   <script>
-    function changeImg(event) {
+    function changeImg(event,index) {
+      console.log(event);
+      console.log("i",index);
       for(let i = 1; i <= imgArray.length; i++){
         imgArray[i-1].src = "images/image"+ i +"_2.jpg";
       }     
@@ -25,7 +27,7 @@
     let imgArray = document.querySelectorAll("img");
     for (let i = 0; i < imgArray.length; i++) {
       // On ajoute l'event listener sur chaque image
-      imgArray[i].addEventListener("mouseover", changeImg);     
+      imgArray[i].addEventListener("mouseover", (event) => changeImg(event,i));     
     }
     
   </script>

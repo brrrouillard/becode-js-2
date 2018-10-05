@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Juste prix</title>
+</head>
+
+<body>
+    <script>
+        let tryCount = 0;
+        let minValue = 20;
+        let maxValue = 80;
+        let numberToGuess;
+        keepPlaying = true;
+
+        function getRandom(min, max){
+            return Math.floor(Math.random() * (max-min+1) + min);
+        }
+
+        function checkIfCorrect(value){
+            if (value > numberToGuess){
+                tryCount++;
+                alert("It's less");
+            }
+            else if (value < numberToGuess) {
+                tryCount++;
+                alert("It's more!")
+            }
+            else {
+                keepPlaying = false;
+            }
+        }
+
+        // GAME
+        numberToGuess = getRandom(minValue, maxValue);
+        while(keepPlaying){
+            console.log(numberToGuess);
+            let value = prompt("Enter your number");
+            checkIfCorrect(value);
+        }
+        alert(`Congrats, you find ${numberToGuess} in ${tryCount} tries !`);
+
+    </script>
+</body>
+
+</html>
