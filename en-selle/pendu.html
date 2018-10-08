@@ -14,6 +14,16 @@
 
         let char = ['B', 'O', 'N', 'J', 'O', 'U', 'R'];
         let foundLetter = ['', '', '', '', '', '', ''];
+        let refusedLetters = [];
+
+        function isInArray(array, char){
+            for (let i = 0; i < array.length; i++){
+                if (array[i] == char){
+                    return true;
+                }
+            }
+            return false;
+        }
 
         function guessLetter(input) {
             let found = false;
@@ -25,7 +35,14 @@
                 }
             }
             if (!found) {
+                console.log(refusedLetters);
                 failCount++;
+                if (!isInArray(refusedLetters, input)){
+                    refusedLetters.push(input);
+                }
+                else {
+                    alert(`You already played letter ${input}`);
+                }
             }
         }
 
